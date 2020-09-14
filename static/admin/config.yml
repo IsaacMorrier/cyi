@@ -6,21 +6,13 @@ media_folder: static/uploads # Media files will be stored in the repo under stat
 public_folder: /uploads # The src attribute for uploaded media will begin with /images/uploads
 
 collections:
-  - name: "work" # Used in routes, e.g., /admin/collections/blog
-    label: "Work" # Used in the UI
-    folder: "static/_work" # The path to the folder where the documents are stored
+  - name: "blog" # Used in routes, e.g., /admin/collections/blog
+    label: "Blog" # Used in the UI
+    folder: "static/_posts" # The path to the folder where the documents are stored
     create: true # Allow users to create new documents in this collection
     slug: "{{slug}}" # Filename template, e.g., title.md
     fields: # The fields for each document, usually in front matter
-      - {label: "Layout", name: "layout", widget: "hidden", default: "work"}
+      - {label: "Layout", name: "layout", widget: "hidden", default: "blog"}
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Description", name: "description", widget: "string"}
-      - {label: "Tags", name: "tags", widget: "relation", collection: "tags", search_fields: ["value"], value_field: "value", display_fields: ["value"]}
-      - {label: "Featured Image", name: "image", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}
-	- name: "tags" # Used in routes, e.g., /admin/collections/blog
-    label: "Tags" # Used in the UI
-    create: true # Allow users to create new documents in this collection
-    fields: # The fields for each document, usually in front matter
-      - {label: "Value", name: "value", widget: "string"}
