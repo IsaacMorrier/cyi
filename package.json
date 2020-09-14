@@ -1,6 +1,6 @@
 {
-  "name": "TODO",
-  "description": "TODO",
+  "name": "cyi.studio",
+  "description": "Website for Challenge Your Imagination",
   "version": "0.0.1",
   "scripts": {
     "dev": "sapper dev",
