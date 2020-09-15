@@ -42,6 +42,6 @@ collections:
         file: static/tags.yml
         fields: 
           - 
-            label: Value
-            name: value
-            widget: string
+            name: tag
+            label: Tags
+            widget: list
