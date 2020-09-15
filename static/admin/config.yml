@@ -40,6 +40,7 @@ collections:
         name: tags
         widget: relation
         collection: tags
+        multiple: true
         search_fields: ["tag"]
         value_field: tag
         display_fields: ["tag"]
