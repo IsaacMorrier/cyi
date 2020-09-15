@@ -9,6 +9,8 @@ tags:
   - Creative Direction
   - Producing
 ---
+## Concept
+
 A performance installation devised with A$AP Rocky to represent challenges he faced while trying to complete his next album. 
 
 > “At Sotheby’s, ASAP Rocky Breaks Out of the Box... By the end of the night, Rocky was in one of those suites, surveying the detritus...Everyone was dancing.”
