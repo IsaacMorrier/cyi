@@ -24,9 +24,25 @@ collections:
         name: title
         widget: string
       - 
+        label: Description
+        name: description
+        widget: string
+      - 
+        label: Client
+        name: client
+        widget: string
+      - 
         label: "Publish Date"
         name: date
         widget: datetime
+      - 
+        label: Tags
+        name: tags
+        widget: relation
+        collection: work
+        search_fields: tag
+        value_field: tag
+        display_fields: tag
       - 
         label: Body
         name: body
