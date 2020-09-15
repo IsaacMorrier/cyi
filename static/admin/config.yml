@@ -12,7 +12,7 @@ collections:
     label: Work
     slug: "{{slug}}"
     create: true
-    folder: static/_posts
+    folder: static/_work
     fields: 
       - 
         default: work
