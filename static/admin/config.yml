@@ -1,27 +1,46 @@
-backend:
+--- 
+backend: 
+  branch: master
+  media_folder: static/uploads
   name: git-gateway
-  branch: master # Branch to update (optional; defaults to master)
-publish_mode: editorial_workflow # Allows you to save drafts before publishing them
-media_folder: static/uploads # Media files will be stored in the repo under static/images/uploads
-public_folder: /uploads # The src attribute for uploaded media will begin with /images/uploads
-
-collections:
-  - name: "work" # Used in routes, e.g., /admin/collections/work
-    label: "Work" # Used in the UI
-    folder: "static/_posts" # The path to the folder where the documents are stored
-    create: true # Allow users to create new documents in this collection
-    slug: "{{slug}}" # Filename template, e.g., title.md
-    fields: # The fields for each document, usually in front matter
-      - {label: "Layout", name: "layout", widget: "hidden", default: "work"}
-      - {label: "Title", name: "title", widget: "string"}
-      - {label: "Publish Date", name: "date", widget: "datetime"}
-      - {label: "Body", name: "body", widget: "markdown"}
-  - name: "Parameters" # Used in routes, e.g., /admin/collections/work
-    label: "Parameters" # Used in the UI
-		files:
-			- name: "tags"
-				label: "Tags"
-				file: "static/tags.yml" # The path to the folder where the documents are stored
-				widget: "list" # Filename template, e.g., title.md
-				fields: # The fields for each document, usually in front matter
-					- {label: "Value", name: "value", widget: "string"}
+  public_folder: /uploads
+  publish_mode: editorial_workflow
+collections: 
+  - 
+    create: true
+    fields: 
+      - 
+        default: work
+        label: Layout
+        name: layout
+        widget: hidden
+      - 
+        label: Title
+        name: title
+        widget: string
+      - 
+        label: "Publish Date"
+        name: date
+        widget: datetime
+      - 
+        label: Body
+        name: body
+        widget: markdown
+    folder: static/_posts
+    label: Work
+    name: work
+    slug: "{{slug}}"
+  - 
+    files: 
+      - 
+        fields: 
+          - 
+            label: Value
+            name: value
+            widget: string
+        file: static/tags.yml
+        label: Tags
+        name: tags
+        widget: list
+    label: Parameters
+    name: Parameters
