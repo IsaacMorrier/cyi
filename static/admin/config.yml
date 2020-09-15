@@ -40,9 +40,9 @@ collections:
         name: tags
         widget: relation
         collection: work
-        search_fields: tag
+        search_fields: ["tag"]
         value_field: tag
-        display_fields: tag
+        display_fields: ["tag"]
       - 
         label: Body
         name: body
