@@ -32,16 +32,13 @@ collections:
         name: body
         widget: markdown
   - 
-    name: Parameters
-    label: Parameters
-    files: 
+    name: tags
+    label: Tags
+    slug: "{{slug}}"
+    create: true
+    folder: static/_tags
+    fields: 
       - 
-        name: tags
-        label: Tags
-        widget: list
-        file: static/tags.yml
-        fields: 
-          - 
-            name: tag
-            label: Tags
-            widget: list
+        name: tag
+        label: Tag
+        widget: string
