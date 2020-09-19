@@ -1,0 +1,11 @@
+<svelte:head>
+  <title>Sapper Blog Template</title>
+</svelte:head>
+
+# When you look at the clouds, what do you see?
+
+## Challenge Your Imagination<sup>Abbr. CYI</sup> is a creative direction, design, and producing studio based in New York City.
+
+## CYI explores every project's unique creative narrative through a rigorous artistic process.
+
+## We are obsessed with creating the never-before-thought-possible.

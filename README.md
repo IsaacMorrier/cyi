@@ -1,17 +1,22 @@
-# cyi
+# cyi.studio
+
+
+The internet home of Challenge Your Imagination, built with Svelte, Sapper, and mdsvex
+
+![Challenge Your Imagination Logo](/static/logo.gif)
 
 ## Dev
 
 ```bash
-npm install
 npm run dev
 ```
 
-Navigate to [localhost:5000](http://localhost:5000).
+Open [localhost:3000](http://localhost:3000).
 
 
-## Prod
+## Build
 
 ```bash
-npm run build
+npm run export
+npx serve __sapper__/export
 ```

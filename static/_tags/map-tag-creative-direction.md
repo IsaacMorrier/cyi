@@ -1,3 +1,0 @@
----
-tag: Creative Direction
----
