@@ -1,55 +1,35 @@
-<script>
-  export let segment;
+<script lang="ts">
+	import Logo from '../components/Logo.svelte';
 </script>
 
-<style>
-  nav {
-    align-items: flex-end;
-    display: flex;
-    flex: 1;
-    font-family: Rubik, sans-serif;
-    font-weight: 700;
-    justify-content: flex-end;
-    text-transform: uppercase;
-  }
+<style lang="scss">
+	nav {
+		padding: 0 1em;
+	}
 
-  a {
-    color: inherit;
-    text-decoration: none;
-    padding: 10px 5px;
-    display: block;
-    position: relative;
-    margin-left: 20px;
-  }
+	ul {
+		margin: 0;
+		padding: 0;
+		text-align: right;
+	}
 
-  a:not(.selected) {
-    opacity: 0.7;
-  }
+	li {
+		display: inline-block;
+	}
 
-  a::before {
-    content: '';
-    position: absolute;
-    transition: transform .3s ease;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 2px;
-    background: #AAA;
-    transform: scaleX(0);
-  }
-
-  a:hover::before,
-  .selected::before {
-    transform: scaleX(1);
-  }
-
-  .selected::before {
-    background: #fd6378;
-  }
+	a {
+		text-decoration: none;
+		padding: 1em 0.5em;
+		display: block;
+	}
 </style>
 
+<Logo />
+
 <nav>
-  <a class='{segment === undefined ? "selected" : ""}' href='.'>home</a>
-  <a class='{segment === "about" ? "selected" : ""}' href='about'>about</a>
-  <a rel=prefetch class='{segment === "work" ? "selected" : ""}' href='work'>work</a>
+	<ul>
+		<li><a class="nav-link" href="#about-us">About Us</a></li>
+		<li><a class="nav-link" href="#work">Our Work</a></li>
+		<li><a class="nav-link" href="#contact-us">Contact Us</a></li>
+	</ul>
 </nav>

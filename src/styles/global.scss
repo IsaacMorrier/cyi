@@ -1,0 +1,25 @@
+@import 'grid.scss';
+@import 'typography.scss';
+
+body {
+    background:$background-color;
+    color: $text-color;
+    font-family: sans-serif;
+    padding: 0;
+    margin: 0;
+}
+
+a {
+    color: inherit;
+}
+
+hr {
+    border-top: 1px solid $text-color;
+    border-right: none;
+    border-bottom: none;
+    border-left: none;
+}
+
+img {
+    max-width: 100%;
+}
