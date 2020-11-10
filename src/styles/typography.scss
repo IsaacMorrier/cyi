@@ -4,3 +4,60 @@
     font-size: .75rem;
     line-height: 1rem;
 }
+
+h1, h2, h3, h4, h5, h6, p {
+    margin-left: 0.625rem;
+    margin-right: 0.625rem;
+}
+
+h1, h2, h3, h4, h5 {
+    font-weight: 600;
+    line-height: 1;
+    text-transform: uppercase;
+}
+
+p {
+    font-size: vw-calc(12);
+    line-height: 1.3333;
+    @include breakpoint(lg) {
+        font-size: vw-calc-lg(24);
+    }
+}
+
+sup {
+    position: relative;
+    vertical-align: top;
+    text-transform: none;
+    font-weight: 500;
+    margin-left: 1%;
+    letter-spacing: 0;
+}
+
+h1 {
+    font-size: vw-calc(24);
+    letter-spacing: -0.3vw;
+    sup {
+        top: -1.5vw;
+        font-size: 40%;
+    }
+    @include breakpoint(lg) {
+        font-size: vw-calc-lg(71);
+        line-height: vw-calc-lg(72);
+        sup {
+            top: -1.25vw;
+            font-size: 25%;
+        }
+    }
+}
+
+.lede {
+    font-size: vw-calc(16);
+    sup {
+        top: -.25vw;
+        font-size: 60%;
+    }
+    @include breakpoint(lg) {
+        font-size: vw-calc-lg(32);
+        line-height: 1.1;
+    }
+}

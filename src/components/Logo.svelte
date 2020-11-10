@@ -2,10 +2,11 @@
 
 </script>
 
-<style>
+<style lang="scss">
   
   div {
     height: 100px;
+    padding: $global-margin $global-margin 30vw;
   }
 
   img {
@@ -15,5 +16,5 @@
 </style>
 
 <div>
-  <img alt="Challenge Your Imagination" src="../../static/Challenge_Your_Imagination-Logotype.svg">
+  <img alt="Challenge Your Imagination" src="/Challenge_Your_Imagination-Logotype.svg">
 </div>

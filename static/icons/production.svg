@@ -1,0 +1,11 @@
+<svg id="Production_Icon" data-name="Production Icon" xmlns="http://www.w3.org/2000/svg" width="72" height="72" viewBox="0 0 72 72">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+    </style>
+  </defs>
+  <rect id="Box" class="cls-1" width="72" height="72"/>
+  <path id="Production" d="M239.751-461.46v16.453l-14.245-8.227v-16.453l14.245-8.226L254-469.687Zm-14.245,24.681v16.453l14.245,8.226v-16.453L254-436.779l-14.247-8.228Zm-28.506,0v16.453l14.246,8.226v-16.453l14.26-8.226-14.26-8.228Zm28.506-32.991L211.245-478,197-469.728v16.494l14.246,8.227v-16.5Z" transform="translate(-189.5 481.002)"/>
+</svg>
