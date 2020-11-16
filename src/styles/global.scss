@@ -1,6 +1,11 @@
 @import 'grid.scss';
 @import 'typography.scss';
 
+html, body {
+    width: 100%;
+    overflow-x: hidden;
+}
+
 body {
     background:$background-color;
     color: $text-color;

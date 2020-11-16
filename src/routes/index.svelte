@@ -1,10 +1,14 @@
 <script lang="ts">
 	import Icon from '../components/Icon.svelte';
+	import Portals from '../components/Portals.svelte';
+
+	let y: number;
 </script>
 
 <style lang="scss">
-
 </style>
+
+<svelte:window bind:scrollY={y}/>
 
 <svelte:head>
 	<title>Challenge Your Imagination</title>
@@ -12,6 +16,7 @@
 
 <div style="background: #000; color: #fff; padding-top: .5rem; padding-bottom: 1.5rem;" class="grid-container-fluid">
 	<h1>Challenge Your Imagination<sup>(Abbr. CYI)</sup> is a creative production studio based in New York City. We create the never-before-thought-possible.</h1>
+	<Portals/>
 	<div style="border-top: 1px solid #fff; border-bottom: 1px solid #fff;" class="row">
 		<div class="col-lg-9">
 			<p class="lede" style="margin-top: 2rem;">We’ve tied up 40 guests in lorem ipsum dolor sit amet consetetur sadipscing elitr,<sup>01</sup> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,   sed diam voluptua, sadipscing elitr lorem ipsum dolor sit amet consetetur sadipscing elitr,   sed diam nonumy eirmod tempor invidunt ut labore et dolore…</p>

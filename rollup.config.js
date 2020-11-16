@@ -5,7 +5,7 @@ import svelte from 'rollup-plugin-svelte';
 import babel from '@rollup/plugin-babel';
 import { terser } from 'rollup-plugin-terser';
 import seqPreprocessor from 'svelte-sequential-preprocessor';
-import autoPreprocess from 'svelte-preprocess';
+import sveltePreprocess from 'svelte-preprocess';
 import typescript from '@rollup/plugin-typescript';import config from 'sapper/config/rollup.js';
 import pkg from './package.json';
 import { mdsvex } from 'mdsvex';
@@ -23,7 +23,7 @@ const onwarn = (warning, onwarn) =>
 	onwarn(warning);
 
 const preprocess  = seqPreprocessor([
-	autoPreprocess({
+	sveltePreprocess({
 		scss: {
 			prependData: `@import 'src/styles/variables.scss';`
 		},
