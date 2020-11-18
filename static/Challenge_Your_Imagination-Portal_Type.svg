@@ -1,0 +1,10 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 480 480">
+  <defs>
+    <style>
+      .a {
+        fill: red;
+      }
+    </style>
+  </defs>
+  <path class="a" d="M250,10C117.452,10,10,117.452,10,250S117.452,490,250,490,490,382.548,490,250,382.548,10,250,10" transform="translate(-10 -10)"/>
+</svg>

@@ -7,7 +7,7 @@ html, body {
 }
 
 body {
-    background:$background-color;
+    background: $background-color;
     color: $text-color;
     font-family: $body-font;
     padding: 0;
@@ -27,4 +27,9 @@ hr {
 
 img {
     max-width: 100%;
+}
+
+.section-black {
+    background: $text-color;
+    color: $background-color;
 }

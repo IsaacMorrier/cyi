@@ -7,30 +7,35 @@
 		
 	const portals = [
 		{
-			scale: .5,
-			pos: { x: -.8, y: -.8, z: -3 },
+			title: "Lab Rat — A$AP Rocky",
+			scale: .45,
+			pos: { x: -.8, y: -.8, z: -2.5 },
 			face: { x: '-1', y: '1', z: '0', a: '70deg' },
-			bg: 'red'
+			bg: 'https://source.unsplash.com/user/erondu'
 		},{
+			title: "Lab Rat — A$AP Rocky",
 			scale: .45,
-			pos: { x: .8, y: -.75, z: -3 },
+			pos: { x: .8, y: -.75, z: -2.5 },
 			face: { x: '-1', y: '-1', z: '-.5', a: '60deg' },
-			bg: 'pink'
+			bg: 'https://source.unsplash.com/user/wsanter'
 		},{
+			title: "Lab Rat — A$AP Rocky",
 			scale: .25,
-			pos: { x: -.15, y: -.2, z: -3 },
+			pos: { x: -.15, y: -.25, z: -4 },
 			face: { x: '.5', y: '1', z: '0', a: '40deg' },
-			bg: 'blue'
+			bg: 'https://source.unsplash.com/user/insungyoon'
 		},{
+			title: "Lab Rat — A$AP Rocky",
 			scale: .45,
-			pos: { x: -.65, y: .65, z: -3 },
+			pos: { x: -.65, y: .55, z: -3 },
 			face: { x: '1', y: '1', z: '-.3', a: '65deg' },
-			bg: 'green'
+			bg: 'https://source.unsplash.com/user/dominikreallife'
 		},{
-			scale: .7,
-			pos: { x: .55, y: .8, z: -3 },
+			title: "Lab Rat — A$AP Rocky",
+			scale: .6,
+			pos: { x: .55, y: .7, z: -2 },
 			face: { x: '1', y: '-1', z: '.5', a: '60deg' },
-			bg: 'purple'
+			bg: 'https://source.unsplash.com/user/marekpiwnicki'
 		}
 	]
 
@@ -43,6 +48,7 @@
         height: 50rem;
         perspective: 2000px;
 		overflow: visible;
+		z-index: 0;
     }
 </style>
 
