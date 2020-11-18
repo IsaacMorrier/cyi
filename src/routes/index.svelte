@@ -1,8 +1,31 @@
 <script lang="ts">
+	import { onMount } from 'svelte';
+	import { spring } from 'svelte/motion';
+	
 	import Icon from '../components/Icon.svelte';
 	import Portals from '../components/Portals.svelte';
-
+	
 	let scrollY: number;
+
+	let sprungScroll = spring({y: 0}, {
+		stiffness: 0.03,
+		damping: 0.65
+	});
+	let sprungMouse = spring({ x: 0, y: 100 }, {
+		stiffness: 0.03,
+		damping: 0.65
+	});
+	$: {
+		sprungScroll.set({y: scrollY});
+	}
+
+	onMount(() => {
+		sprungMouse.set ({x: (window.innerWidth / 2), y: 100})
+	});
+
+	function handleMousemove(e) {
+		sprungMouse.set({ x: e.clientX, y: e.clientY });
+	}
 </script>
 
 <style lang="scss">
@@ -21,6 +44,7 @@
 </style>
 
 <svelte:window bind:scrollY={scrollY}/>
+<svelte:body on:mousemove={handleMousemove}/>
 
 <svelte:head>
 	<title>Challenge Your Imagination</title>
@@ -28,7 +52,7 @@
 
 <section id="section-intro" class="section-black grid-container-fluid">
 	<h1>Challenge Your Imagination<sup>(Abbr. CYI)</sup> is a creative production studio based in New York City. We create the never-before-thought-possible.</h1>
-	<Portals {scrollY}/>
+	<Portals {sprungScroll} {sprungMouse}/>
 	<div id="section-work" class="row">
 		<div class="col-lg-9">
 			<p class="lede" style="margin-top: 2rem;">We’ve tied up 40 guests in lorem ipsum dolor sit amet consetetur sadipscing elitr,<sup>01</sup> sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat,   sed diam voluptua, sadipscing elitr lorem ipsum dolor sit amet consetetur sadipscing elitr,   sed diam nonumy eirmod tempor invidunt ut labore et dolore…</p>

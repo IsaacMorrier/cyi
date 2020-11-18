@@ -6,18 +6,33 @@
     export let scale: number;
     export let containerHeight: number;
     export let containerWidth: number;
-    export let scrollY: number;
+    export let containerY: number;
+    export let sprungScroll;
+    export let sprungMouse;
 
-    let diameter: string, x: string, y: string, z: string, i: number, j: number, k: number, t: string;
+    let diameter: number, x: number, y: number, z: number, i: number, j: number, k: number, t: number, dx: number, dy: number, shadow: number;
     $: {
-        diameter = containerWidth * (((0.5 - 1) / (2560-375)) * (containerWidth - 375) + 1) + 'px'; // make portals appropriate base size for screen width: 1x screen width at 375px, 0.5x screen width at 2560px
-        x = (containerWidth / 2) * pos.x + 'px';
-        y = (containerHeight / 2) * pos.y - (.05 * (5 + pos.z) * scrollY) + 'px';
-        z = 100 * pos.z + 'px';
-        i = face.x;
-        j = face.y;
-        k = face.z;
-        t = face.a;
+        diameter = containerWidth * (((0.5 - 1) / (2560-375)) * (containerWidth - 375) + 1); // make portals appropriate base size for screen width: 1x screen width at 375px, 0.5x screen width at 2560px
+        x = containerWidth * pos.x;
+        z = 100 * pos.z;
+    }
+    $: {
+        y = containerHeight * pos.y - (.05 * (5 + pos.z) * $sprungScroll.y); // add a bit of scroll parallax based on z position
+        dx = ($sprungMouse.x - x) / (containerWidth); // difference between horizontal mouse position and portal location, all over width
+        dy = ($sprungMouse.y - y - containerY + $sprungScroll.y) / (containerHeight); // difference between vertical mouse position and portal location, all over width
+        i = - dy;
+        j = 2 * dx;
+        k = dx;
+        t = face.a * Math.sqrt(dx ** 2 + dy ** 2);
+        shadow = Math.max(
+            .8, // minimum of .8 brightness
+            (
+                1
+                - dy // mouse below decreases brightness
+                - Math.sqrt(dx ** 2 + dy ** 2) // mouse far away decreases brightness
+                + (pos.z + 2) // farther z decreases brightness
+            )
+        );
     }
 
 </script>
@@ -25,8 +40,8 @@
 <style lang="scss">
     .portal-container {
         position: absolute;
-        top: 50%;
-        left: 50%;
+        top: 0;
+        left: 0;
         margin: 0;
         backface-visibility: hidden;
         &:hover {
@@ -42,7 +57,7 @@
             fill: $background-color;
             text-anchor: middle;
             font-size: 32px;
-            opacity: .2;
+            opacity: 0;
             transition: all .2s ease-out;
         }
     }
@@ -62,18 +77,20 @@
 </style>
 
 <div class="portal-container" style="
-    height: {diameter};
-    width: {diameter};
-    border-radius: {diameter};
+    height: {diameter}px;
+    width: {diameter}px;
+    border-radius: {diameter}px;
+    opacity: {shadow};
     transform:
         translate(-50%, -50%)
-        translate3d({x}, {y}, {z})
+        translate3d({x}px, {y}px, {z}px)
         scale3d({scale}, {scale}, {scale})
-        rotate3d({i}, {j}, {k}, {t})
+        rotate3d({i}, {j}, {k}, {t}deg)
 ">
     <div>
         <!-- {diameter}<br>
         {x}, {y}, {z} -->
+        <!-- {dx} -->
         <svg xmlns="http://www.w3.org/2000/svg" class="portal-type" viewBox="0 0 500 500">
             <defs>
                 <path
