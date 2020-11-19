@@ -1,3 +1,22 @@
+@font-face {
+    font-family: 'Good Sans';
+    src: url('/fonts/GoodSans-Medium.eot');
+    src: url('/fonts/GoodSans-Medium.woff2') format('woff2'),
+         url('/fonts/GoodSans-Medium.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+  }
+@font-face {
+    font-family: 'Good Sans';
+    src: url('/fonts/GoodSans-Bold.eot');
+    src: url('/fonts/GoodSans-Bold.woff2') format('woff2'),
+         url('/fonts/GoodSans-Bold.woff') format('woff');
+    font-weight: 700;
+    font-style: normal;
+  }
+
+$body-font: 'Good Sans', Times, sans-serif;
+
 .nav-link {
     text-transform: uppercase;
     font-weight: bold;

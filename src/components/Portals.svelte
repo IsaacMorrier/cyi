@@ -1,5 +1,5 @@
 <script lang="ts">
-import { onMount } from 'svelte';
+	import { onMount } from 'svelte';
 
     import Portal from './Portal.svelte'
 	export let sprungScroll;
@@ -21,40 +21,40 @@ import { onMount } from 'svelte';
 
 	const portals = [
 		{
-			title: "Lab Rat — A$AP Rocky",
+			title: "Albee — Sotheby’s",
 			scale: .45,
-			pos: { x: .1, y: .1, z: -2.5 },
+			pos: { x: .1, y: 0, z: -2.5 },
 			face: { x: 0, y: 0, z: 0, a: 80 },
 			// face: { x: '-1', y: '1', z: '0', a: '60' },
-			bg: 'https://source.unsplash.com/user/erondu'
+			bg: ['/img/Challenge_Your_Imagination-Albee-Sothebys.jpg']
 		},{
-			title: "Lab Rat — A$AP Rocky",
+			title: "Scarlet Night London — Virgin Voyages",
 			scale: .45,
-			pos: { x: .9, y: .2, z: -2.5 },
+			pos: { x: .85, y: .1, z: -2.5 },
 			face: { x: 0, y: 0, z: 0, a: 80 },
 			// face: { x: '-1', y: '-1', z: '-.5', a: '60' },
-			bg: 'https://source.unsplash.com/user/wsanter'
+			bg: ['/img/Challenge_Your_Imagination-Scarlet_Night_London-Virgin_Voyages.jpg']
 		},{
-			title: "Lab Rat — A$AP Rocky",
+			title: "Fairgrounds — Big Apple Circus",
 			scale: .25,
-			pos: { x: .4, y: .4, z: -4 },
+			pos: { x: .45, y: .4, z: -2.5 },
 			face: { x: 0, y: 0, z: 0, a: 80 },
 			// face: { x: '.5', y: '1', z: '0', a: '80' },
-			bg: 'https://source.unsplash.com/user/insungyoon'
+			bg: ['/img/Challenge_Your_Imagination-Fairgrounds-Big_Apple_Circus.jpg']
 		},{
-			title: "Lab Rat — A$AP Rocky",
+			title: "Lux — Yale University",
 			scale: .45,
-			pos: { x: .2, y: .7, z: -3 },
+			pos: { x: .15, y: .8, z: -3 },
 			face: { x: 0, y: 0, z: 0, a: 80 },
 			// face: { x: '1', y: '1', z: '-.3', a: '60' },
-			bg: 'https://source.unsplash.com/user/dominikreallife'
+			bg: ['/img/Challenge_Your_Imagination-Lux-Yale_University.jpg']
 		},{
 			title: "Lab Rat — A$AP Rocky",
 			scale: .6,
-			pos: { x: .7, y: .7, z: -2 },
+			pos: { x: .8, y: .9, z: -2 },
 			face: { x: 0, y: 0, z: 0, a: 80 },
 			// face: { x: '1', y: '-1', z: '.5', a: '60' },
-			bg: 'https://source.unsplash.com/user/marekpiwnicki'
+			bg: ['/img/Challenge_Your_Imagination-Lab_Rat-ASAP_Rocky.jpg']
 		}
 	]
 
@@ -64,10 +64,13 @@ import { onMount } from 'svelte';
 <style lang="scss">
 	#container {
         position: relative;
-        height: 50rem;
+        height: 30rem;
         perspective: 2000px;
 		overflow: visible;
 		z-index: 0;
+		@include breakpoint(lg) {
+			height: 40rem;
+		}
 	}
 	svg {
 		position: fixed;
