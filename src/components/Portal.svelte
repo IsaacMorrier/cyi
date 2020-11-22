@@ -23,17 +23,17 @@
         svgBlur: number;
     $: {
         diameter = containerWidth * (((0.5 - 1) / (2560-375)) * (containerWidth - 375) + 1); // make portals appropriate base size for screen width: 1x screen width at 375px, 0.5x screen width at 2560px
-        x = containerWidth * pos.x;
-        z = 100 * pos.z;
     }
     $: {
+        x = containerWidth * pos.x - (.1 * $sprungMouse.x);
         y = containerHeight * pos.y - (.1 * (5 + pos.z) * $sprungScroll.y); // add a bit of scroll parallax based on z positio);
+        z = 80 * (pos.z + 3 * Math.sqrt(dx ** 2 + dy ** 2));
         dx = ($sprungMouse.x - x) / (containerWidth); // difference between horizontal mouse position and portal location, all over width
         dy = ($sprungMouse.y - y - containerY + $sprungScroll.y) / (containerHeight); // difference between vertical mouse position and portal location, all over width
-        i = - dy;
-        j = 2 * dx;
+        i = -.5 * dy;
+        j = dx;
         k = dx;
-        t = Math.round(face.a * Math.sqrt(dx ** 2 + dy ** 2));
+        t = face.a * Math.sqrt(dx ** 2 + dy ** 2);
         svgBlur = 1 - Math.sqrt(dx ** 2 + dy ** 2);
         shadow = Math.max(
             .8, // minimum of .8 brightness

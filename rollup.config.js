@@ -33,13 +33,10 @@ const preprocess  = seqPreprocessor([
 	}),
 	mdsvex(),
 	image({
-		sizes: [400, 800, 1200],
-		breakpoints: [375, 768, 1024],
-		trace: {
-			background: "#f3ecdb",
-			color: "#414535",
-			threshold: 120
-		  } 
+		sizes: [800, 1440, 1920],
+		breakpoints: [375, 700, 1368],
+		placeholder: "blur",
+		quality: 85
 	})
 ]);
 

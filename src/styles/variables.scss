@@ -29,6 +29,9 @@ $cols: 12;
 }
 
 @mixin breakpoint($point) {
+    @if $point == md {
+      @media (min-width: $breakpoint-md * 1rem) { @content ; }
+   }
     @if $point == lg {
       @media (min-width: $breakpoint-lg * 1rem) { @content ; }
    }
