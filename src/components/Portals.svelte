@@ -1,7 +1,7 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 
-    import Portal from './Portal.svelte'
+    import Portal from '../Portal.svelte'
 	export let sprungScroll;
 	export let sprungMouse;
 

@@ -5,8 +5,8 @@
     export let title: string;
     export let pos: any;
     export let face: any;
-    export let bg: string[];
-    export let gradient: string[];
+    export let bg: string;
+    export let gradient: string;
     export let scale: number;
     export let containerHeight: number;
     export let containerWidth: number;
