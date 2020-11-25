@@ -5,6 +5,7 @@
 	
 	import Icon from '../components/Icon.svelte';
 	import Portals from '../components/Portals.svelte';
+	import Footer from '../components/Footer.svelte';
 	
 	let scrollY: number;
 
@@ -42,11 +43,12 @@
 		position: relative;
 		border-top: .5px solid;
 		border-bottom: .5px solid;
-		padding: 1rem 0 1rem;
 		z-index: 100;
 		@include breakpoint(lg) {
 			p {
-				max-width: 80vw;
+				max-width: 64vw;
+				padding-right: 8vw;
+				border-right: .5px solid white;
 			}
 		}
 	}
@@ -63,8 +65,8 @@
 	<h1>Challenge Your Imagination<sup>(Abbr. CYI)</sup> is a creative production studio based in New York City. We create the never-before-thought-possible.</h1>
 	<Portals {sprungScroll} {sprungMouse}/>
 	<div id="section-work">
-		<p class="lede col-lg-9">We’ve tied up 40 audience members in shibari ropes and served them tuna after an aerial duet,
-			inflated a 75-foot octopus in the middle of the ocean,
+		<p class="lede col-lg-9">We’ve tied up 40 audience members in shibari ropes and served them tuna,
+			inflated a 75-foot octopus in the middle of the Atlantic Ocean,
 			driven hundreds of guests and 60 performers across London in a parade of vehicles that included a pink firetruck and a stretch limo police car,
 			put A$AP Rocky through physical and psychological tests on the sales floor of Sotheby’s,
 			made concert halls feel like arenas, and more.
@@ -76,11 +78,11 @@
 </section>
 <div class="grid-container-fluid">
 	<div class="row">
-		<p class="col-9 col-offset-3 col-lg-6 col-lg-offset-6">Our process begins at round tables where all ideas are equal. Our favorite collaborators are multidisciplinary thinkers. Sometimes the most meaningful worlds are crafted from cardboard boxes. We interrogate our instincts, challenge complacency, dissect our fears, and iterate until new forms and stories emerge.  We invite our audiences to embrace the unexpected and illuminate the unfamiliar within themselves.</p>
+		<p class="col-9 col-offset-3 col-lg-6 col-lg-offset-6 space-top space-bottom">Our process begins at round tables where all ideas are equal. Our favorite collaborators are multidisciplinary thinkers. Sometimes the most meaningful worlds are crafted from cardboard boxes. We interrogate our instincts, challenge complacency, dissect our fears, and iterate until new forms and stories emerge.  We invite our audiences to embrace the unexpected and illuminate the unfamiliar within themselves.</p>
 	</div>
 	<div class="row">
-		<div class="col-12">
-			<p style="font-size: 1.5rem">Our process begins at round tables where all ideas are equal. Our favorite collaborators are multidisciplinary thinkers. Sometimes the most meaningful worlds are crafted from cardboard boxes. We interrogate our instincts, challenge complacency, dissect our fears, and iterate until new forms and stories emerge.  We invite our audiences to embrace the unexpected and illuminate the unfamiliar within themselves.</p>
+		<div class="col-12" style="border-top: .5px solid black">
+			<p class="lede">Our process begins at round tables where all ideas are equal. Our favorite collaborators are multidisciplinary thinkers. Sometimes the most meaningful worlds are crafted from cardboard boxes. We interrogate our instincts, challenge complacency, dissect our fears, and iterate until new forms and stories emerge.  We invite our audiences to embrace the unexpected and illuminate the unfamiliar within themselves.</p>
 		</div>
 		<div class="col-12 col-lg-6">
 			<p>Our process begins at round tables where all ideas are equal. Our favorite collaborators are multidisciplinary thinkers. Sometimes the most meaningful worlds are crafted from cardboard boxes. We interrogate our instincts, challenge complacency, dissect our fears, and iterate until new forms and stories emerge.  We invite our audiences to embrace the unexpected and illuminate the unfamiliar within themselves.</p>
@@ -94,7 +96,9 @@
 		</div>
 	</div>
 </div>
-<div class="grid-container-fluid">
+<div class="grid-container-fluid space-top">
 	<Image src="img/Challenge_Your_Imagination-Footer-1.jpg" alt="A$AP Rocky stands in a glass box during his performance of Lab Rat."/>
 </div>
+<h2 class="h1">Let’s start dreaming</h2>
+<Footer />
 

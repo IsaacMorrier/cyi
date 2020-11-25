@@ -6,6 +6,7 @@
     export let pos: any;
     export let face: any;
     export let bg: string[];
+    export let gradient: string[];
     export let scale: number;
     export let containerHeight: number;
     export let containerWidth: number;
@@ -46,22 +47,22 @@
         );
     }
 
-    let motion = tweened(0, { duration: 20000 * bg.length });
-    $: slides = [
-        {
-            image: bg[0],
-            translateX: motion,
-            opacity: 1
-        }, {
-            image: bg[1],
-            translateX: (motion + 500),
-            opacity: 1
-        }
-    ]
+    // let motion = tweened(0, { duration: 20000 * bg.length });
+    // $: slides = [
+    //     {
+    //         image: bg[0],
+    //         translateX: motion,
+    //         opacity: 1
+    //     }, {
+    //         image: bg[1],
+    //         translateX: (motion + 500),
+    //         opacity: 1
+    //     }
+    // ]
         
-    onMount(() => {
-        motion.set((bg.length - .5) * -1000);
-    });
+    // onMount(() => {
+    //     motion.set((bg.length - .5) * -1000);
+    // });
     
         /**
          * 
@@ -102,7 +103,7 @@
         text { 
             fill: $background-color;
             text-anchor: middle;
-            font-size: rem-calc(24);
+            font-size: rem-calc(18);
             text-transform: uppercase;
             opacity: 0;
             transition: all .2s ease-out;
@@ -151,8 +152,8 @@
 
                 <filter id="svg-blur" >
                     <feGaussianBlur stdDeviation="30" in="SourceGraphic" result="blurred"/>
-                    <!-- <feTurbulence id="turbulence" type='fractalNoise' baseFrequency='1' stitchTiles='stitch' result="noise"/> -->
-                    <!-- <feBlend in="blurred" in2="noise" mode="screen"/> -->
+                    <feTurbulence id="turbulence" type='fractalNoise' baseFrequency='2' stitchTiles='stitch' result="noise"/>
+                    <feBlend in="blurred" in2="noise" mode="lighten"/>
                 </filter>
 
                 <clipPath id="svg-mask">
@@ -162,8 +163,9 @@
             <!-- <g clip-path="url(#svg-mask)" filter="url(#svg-blur)"> -->
             <g clip-path="url(#svg-mask)">
             <!-- {#each bg as src, i} -->
-            <image width="1000" height="500" xlink:href="{slides[0].image}" filter="url(#svg-blur)" transform="translate(-250,0)"/>
-            <image class="notblurred" width="1000" height="500" xlink:href="{slides[0].image}" transform="translate(-250,0)"/>
+            <image width="1000" height="500" xlink:href="{gradient}" transform="translate(-250,0)"/>
+            <!-- <image width="1000" height="500" xlink:href="{bg}" filter="url(#svg-blur)" transform="translate(-250,0)"/> -->
+            <image class="notblurred" width="1000" height="500" xlink:href="{bg}" transform="translate(-250,0)"/>
                 <!-- <image width="1000" height="500" transform="translate({$motion},0)" xlink:href="{slides[0].image}/1000x500" style="opacity: 0.5"/> -->
                 <!-- <image width="1000" height="500" transform="translate({$motion},0)" xlink:href="{src}/1000x500" style="opacity: 0.5"/>
             {/each} -->

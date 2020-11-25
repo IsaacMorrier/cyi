@@ -23,38 +23,43 @@
 		{
 			title: "Hello Bi+ches Tour — CL",
 			scale: .45,
-			pos: { x: .2, y: .1, z: -2.5 },
+			pos: { x: .2, y: .2, z: -2.5 },
 			face: { x: 0, y: 0, z: 0, a: 80 },
 			// face: { x: '-1', y: '1', z: '0', a: '60' },
-			bg: ['/img/Challenge_Your_Imagination-Hello_Bi+ches_Tour-CL.jpg']
+			bg: ['/img/Challenge_Your_Imagination-Hello_Bi+ches_Tour-CL.jpg'],
+			gradient: ['/img/Challenge_Your_Imagination-Hello_Bi+ches_Tour-CL-Gradient.jpg']
 		},{
 			title: "Scarlet Night London — Virgin Voyages",
 			scale: .45,
-			pos: { x: .85, y: .1, z: -2.5 },
+			pos: { x: .85, y: .25, z: -2.5 },
 			face: { x: 0, y: 0, z: 0, a: 80 },
 			// face: { x: '-1', y: '-1', z: '-.5', a: '60' },
-			bg: ['/img/Challenge_Your_Imagination-Scarlet_Night_London-Virgin_Voyages.jpg']
+			bg: ['/img/Challenge_Your_Imagination-Scarlet_Night_London-Virgin_Voyages.jpg'],
+			gradient: ['/img/Challenge_Your_Imagination-Scarlet_Night_London-Virgin_Voyages-Gradient.jpg']
 		},{
 			title: "Fairgrounds — Big Apple Circus",
 			scale: .25,
-			pos: { x: .5, y: .4, z: -2.5 },
+			pos: { x: .5, y: .5, z: -2.5 },
 			face: { x: 0, y: 0, z: 0, a: 80 },
 			// face: { x: '.5', y: '1', z: '0', a: '80' },
-			bg: ['/img/Challenge_Your_Imagination-Fairgrounds-Big_Apple_Circus.jpg']
+			bg: ['/img/Challenge_Your_Imagination-Fairgrounds-Big_Apple_Circus.jpg'],
+			gradient: ['/img/Challenge_Your_Imagination-Fairgrounds-Big_Apple_Circus-Gradient.jpg']
 		},{
 			title: "Lux — Yale University",
 			scale: .45,
-			pos: { x: .25, y: .8, z: -3 },
+			pos: { x: .25, y: .9, z: -3 },
 			face: { x: 0, y: 0, z: 0, a: 80 },
 			// face: { x: '1', y: '1', z: '-.3', a: '60' },
-			bg: ['/img/Challenge_Your_Imagination-Lux-Yale_University.jpg']
+			bg: ['/img/Challenge_Your_Imagination-Lux-Yale_University.jpg'],
+			gradient: ['/img/Challenge_Your_Imagination-Lux-Yale_University-Gradient.jpg']
 		},{
 			title: "Lab Rat	— Sotheby's × A$AP Rocky",
 			scale: .6,
-			pos: { x: .8, y: .9, z: -2 },
+			pos: { x: .8, y: 1, z: -2 },
 			face: { x: 0, y: 0, z: 0, a: 80 },
 			// face: { x: '1', y: '-1', z: '.5', a: '60' },
-			bg: ['/img/Challenge_Your_Imagination-Lab_Rat-ASAP_Rocky.jpg']
+			bg: ['/img/Challenge_Your_Imagination-Lab_Rat-ASAP_Rocky.jpg'],
+			gradient: ['/img/Challenge_Your_Imagination-Lab_Rat-ASAP_Rocky-Gradient.jpg']
 		}
 	]
 

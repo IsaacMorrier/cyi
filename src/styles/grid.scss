@@ -65,6 +65,14 @@ $map-grid-props: (
     width: 100%;
 }
 
+.space-top {
+  margin-top: 4rem;
+}
+
+.space-bottom {
+  margin-bottom: 4rem;
+}
+
 @each $modifier , $breakpoint in $map-grid-props {
     @include create-col-classes($modifier, $cols, $breakpoint);
 }

@@ -5,20 +5,20 @@
 <style lang="scss">
   
   div {
-    height: rem-calc(420);
+    height: rem-calc(480);
     padding: $global-margin;
     @include breakpoint(lg) {
       min-height: rem-calc(420);
-      height: 50vh;
+      height: 54vh;
     }
   }
 
   img {
-    height: rem-calc(80);
+    height: rem-calc(72);
     margin: 1rem;
     @include breakpoint(lg) {
-      min-height: rem-calc(64);
-      height: vw-calc-lag(64);
+      min-height: rem-calc(48);
+      height: vw-calc-lag(48);
     }
   }
   
