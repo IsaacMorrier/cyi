@@ -1,5 +1,7 @@
 <script lang="ts">
 	import Logo from '../components/Logo.svelte';
+
+	export let color;
 </script>
 
 <style lang="scss">
@@ -24,7 +26,7 @@
 	// }
 </style>
 
-<Logo />
+<Logo {color}/>
 
 <!-- <nav>
 	<ul>

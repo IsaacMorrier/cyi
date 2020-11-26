@@ -13,6 +13,7 @@
     export let containerY: number;
     export let sprungScroll;
     export let sprungMouse;
+    export let color;
     
 
     let diameter: number,
@@ -37,12 +38,12 @@
         t = face.a * Math.sqrt(dx ** 2 + dy ** 2);
         svgBlur = 1 - Math.sqrt(dx ** 2 + dy ** 2);
         shadow = Math.max(
-            .8, // minimum of .8 brightness
+            .9, // minimum of .8 brightness
             (
                 1
-                - dy // mouse below decreases brightness
+                // - dy // mouse below decreases brightness
                 - Math.sqrt(dx ** 2 + dy ** 2) // mouse far away decreases brightness
-                + (pos.z + 2) // farther z decreases brightness
+                // + (pos.z + 2) // farther z decreases brightness
             )
         );
     }
@@ -101,7 +102,7 @@
         width: 100%;
         height: 100%;
         text { 
-            fill: $background-color;
+            fill: $text-color;
             text-anchor: middle;
             font-size: rem-calc(18);
             text-transform: uppercase;
@@ -121,9 +122,6 @@
         background-size: cover;
         background-repeat: no-repeat;
     }
-    .svg-image {
-        
-    }
 
 </style>
 
@@ -139,9 +137,6 @@
         rotate3d({i}, {j}, {k}, {t}deg)
 ">
     <div>
-        <!-- {diameter}<br>
-        {x}, {y}, {z} -->
-        <!-- {dx} -->
         <svg xmlns="http://www.w3.org/2000/svg" class="portal-type" viewBox="0 0 500 500">
             <defs>
                 <path
@@ -172,7 +167,7 @@
             </g>
 
             <text>
-                <textPath xlink:href="#text-circle" startOffset="50%">{title}</textPath>
+                <textPath xlink:href="#text-circle" startOffset="50%" fill="rgb({color})">{title}</textPath>
             </text>
             
           </svg>

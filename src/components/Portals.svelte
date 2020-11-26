@@ -1,9 +1,11 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
 
-    import Portal from '../Portal.svelte'
+    import Portal from './Portal.svelte'
 	export let sprungScroll;
 	export let sprungMouse;
+	export let color;
+	
 
     let containerWidth = 0,
 		containerHeight = 0,
@@ -84,7 +86,6 @@
 		width: 100%;
 		height: 100%
 	}
-	circle { fill: #ff3e00 }
 </style>
 
 <div id="container" bind:clientWidth={containerWidth} bind:clientHeight={containerHeight} bind:offsetHeight={containerY}>
@@ -93,7 +94,7 @@
 	mouse.x = {$sprungMouse.x}, mouse.y = {$sprungMouse.y}<br>
 	{$sprungScroll.y} -->
 	{#each portals as portal, i}
-		<Portal {containerWidth} {containerHeight} {containerY} {sprungScroll} {sprungMouse} {...portal}/>
+		<Portal {containerWidth} {containerHeight} {containerY} {sprungScroll} {sprungMouse} {color} {...portal}/>
 	{/each}
 	<!-- <svg>
 		<circle cx={$sprungMouse.x} cy={$sprungMouse.y} r="20"/>

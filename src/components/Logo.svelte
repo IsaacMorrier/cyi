@@ -1,5 +1,5 @@
 <script>
-
+  export let color;
 </script>
 
 <style lang="scss">
@@ -25,5 +25,5 @@
 </style>
 
 <div>
-  <img alt="Challenge Your Imagination" src="/Challenge_Your_Imagination-Logotype.svg">
+  <img alt="Challenge Your Imagination" src="/Challenge_Your_Imagination-Logotype.svg" style="background: {color}">
 </div>

@@ -1,6 +1,9 @@
+<script lang="ts">
+	export let color;
+</script>
+
 <style lang="scss">
     footer {
-        background: $text-color;
         color: $background-color;
         -webkit-font-smoothing: antialiased;
 		-moz-osx-font-smoothing: grayscale;
@@ -36,7 +39,7 @@
 
 </style>
 
-<footer>
+<footer style="background: rgb({color})">
     <a id="footer-email"href="mailto:hi@cyi.studio">hi@cyi.studio</a>
     <span id="footer-location">New York City</span>
     <span id="footer-copyright" class="gray">&copy;2020 Challenge Your Imagination</span>
