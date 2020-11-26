@@ -84,24 +84,23 @@ import type { copyFile } from 'fs';
 			margin-top: 0;
 		}
 	}
+	#contact-cta {
+		margin-bottom: rem-calc(72);
+		@include breakpoint(lg) {
+			margin-bottom: rem-calc(128)
+		}
+	}
 
 </style>
 
 <svelte:window bind:scrollY={scrollY}/>
-<svelte:body on:mousemove={handleMousemove}/>
+<svelte:body style="background-color: rgb({color});" on:mousemove={handleMousemove}/>
 
 <svelte:head>
 	<title>Challenge Your Imagination</title>
 </svelte:head>
 
 <div id="page" bind:clientHeight={h} style="color:rgb({color})">
-	<div style="position:fixed; display:inline-block; background: white; top: 0">
-		scrollY: {scrollY}<br>
-		colorSectionHeight: {colorSectionHeight}<br>
-		firstColor: {firstColor}<br>
-		secondColor: {secondColor}<br>
-		colorInterpolation: {colorInterpolation}<br>
-		color: {color}</div>
 	<section id="section-intro" class="grid-container-fluid">
 		<h1>Challenge Your Imagination<sup>(Abbr. CYI)</sup> is a creative production studio based in New York City. We create the never-before-thought-possible.</h1>
 		<Portals {sprungScroll} {sprungMouse} {color}/>
@@ -138,9 +137,9 @@ import type { copyFile } from 'fs';
 		<Image src="img/Challenge_Your_Imagination-Footer-1.jpg" alt="A$AP Rocky stands in a glass box during his performance of Lab Rat."/>
 	</div>
 	<div id="section-contact" class="grid-container-fluid">
-		<h2 class="h1">Let’s start dreaming</h2>
+		<h2 id="contact-cta" class="h1">Let’s start dreaming</h2>
 		<div class="row" style="border-top: .5px solid;">
-			<p class="col-4 col-offset-8" style="border-left: .5px solid;"><a href="mailto:info@cyi.studio">Contact Us</a></p>
+			<p class="col-4 col-offset-8" style="border-left: .5px solid;"><a class="nav-link" href="mailto:info@cyi.studio">Contact Us</a></p>
 		</div>
 	</div>
 	<Footer {color}/>
